@@ -19,6 +19,24 @@ class DataLoader():
         self.label_dicts = []
         self.count = 0
         self.get_label_dict(batch_size)
+        self.test_img_names = ["./datasets/facades/test/2.jpg",
+                            "./datasets/facades/test/8.jpg",
+                            "./datasets/facades/test/9.jpg",
+                            "./datasets/facades/test/10.jpg",
+                            "./datasets/facades/test/12.jpg",
+                            "./datasets/facades/test/15.jpg",
+                            "./datasets/facades/test/20.jpg",
+                            "./datasets/facades/test/26.jpg",
+                            "./datasets/facades/test/42.jpg",
+                            "./datasets/facades/test/44.jpg",
+                            "./datasets/facades/test/51.jpg",
+                            "./datasets/facades/test/59.jpg",
+                            "./datasets/facades/test/77.jpg",
+                            "./datasets/facades/test/87.jpg",
+                            "./datasets/facades/test/90.jpg",
+                            "./datasets/facades/test/96.jpg",
+                            "./datasets/facades/test/101.jpg"]
+
 
 
     def get_label_dict(self, batch_size):
@@ -47,7 +65,7 @@ class DataLoader():
         data_type = "train" if not is_testing else "test"
 
         if is_testing:
-            path = glob('./datasets/%s/%s/*' % (self.dataset_name, data_type))
+            path = self.test_img_names
             batch_images = np.random.choice(path, size=batch_size)
             print ("Sample image:", batch_images)
         else:
