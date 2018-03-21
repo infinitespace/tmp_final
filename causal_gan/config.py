@@ -16,7 +16,7 @@ def add_argument_group(name):
 # Data
 data_arg = add_argument_group('Data')
 #data_arg.add_argument('--batch_size', type=int, default=16)#default set elsewhere
-data_arg.add_argument('--causal_model', type=str,
+data_arg.add_argument('--causal_model', type=str, default='window_causes_cornice',
                      help='''Matches the argument with a key in ./causal_graph.py and sets the graph attribute of cc_config to be a list of lists defining the causal graph''')
 data_arg.add_argument('--data_dir', type=str, default='data')
 data_arg.add_argument('--dataset', type=str, default='facades')

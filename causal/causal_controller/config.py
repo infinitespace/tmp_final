@@ -22,7 +22,7 @@ def add_argument_group(name):
 
 #Pretrain network
 pretrain_arg=add_argument_group('Pretrain')
-pretrain_arg.add_argument('--pt_load_path', type=str, default='causal/logs/facades_0320_003619/controller/checkpoints/CC-Model-1001')
+pretrain_arg.add_argument('--pt_load_path', type=str, default='causal/logs/facades_0320_213607/controller/checkpoints/CC-Model-1001')
 pretrain_arg.add_argument('--is_pretrain',type=str2bool,default=False,
                          help='to do pretraining')
 #pretrain_arg.add_argument('--only_pretrain', action='store_true',

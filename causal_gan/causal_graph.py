@@ -64,9 +64,9 @@ all_nodes=[
     ]
 
 causal_graphs={
-'window_causes_sill':[
-        ['window',['sill']],
-        ['sill',[]],
+'window_causes_cornice':[
+        ['window',['cornice']],
+        ['cornice',[]],
     ],
 
 'subset1_nodes':[
